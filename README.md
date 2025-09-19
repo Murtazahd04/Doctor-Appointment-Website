@@ -4,17 +4,16 @@ We are Making This Website for Our College Mini Project.
 Installation
 To set up the project locally, run the following commands in your terminal:
 
-# Create a new Vite project with React
+# Create Vite + React project
 npm create vite@latest frontend
-
-# Go inside the project
 cd frontend
 
-# Install core dependencies
+# Core dependencies
 npm install
 
-# Install essential libraries
+# Extra libraries used so far
 npm install axios react-router-dom react-toastify
 
-# Install Tailwind CSS and its Vite plugin
+# Tailwind + Vite plugin
 npm install tailwindcss @tailwindcss/vite
+
