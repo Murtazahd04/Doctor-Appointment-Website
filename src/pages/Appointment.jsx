@@ -9,7 +9,7 @@ const Appointment = () => {
   const daysOfWeek=['SUN','MON','TUE','WED','THU','FRI','SAT']
 
   const [docInfo, setDocInfo] = useState(null)
-  const [docSlot,setDocSlot]=useState([])
+  const [docSlots,setDocSlots]=useState([])
   const [slotIndex,setSlotIndex]=useState(0)
   const [slotTime,setSlotTime]=useState('')
 
@@ -18,7 +18,7 @@ const Appointment = () => {
     setDocInfo(docInfo)
   }
   const getAvailabelSlots = async()=>{
-    setDocSlot([])
+    setDocSlots([])
 
     //getting current date
     let today=new Date()
@@ -34,7 +34,7 @@ const Appointment = () => {
       endtime.setHours(21,0,0,0)
 
       //setting hours
-      if(today.getDate()=currentDate.getDate()){
+      if(today.getDate()===currentDate.getDate()){
         currentDate.setHours(currentDate.getHours()>10 ? currentDate.getHours()+1:10)
         currentDate.setMinutes(currentDate.getMinutes()>30?30:0)
       }else{
